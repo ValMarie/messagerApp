@@ -1,17 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-// import LogIn from './components/login';
+import LogIn from './components/login';
 import Messages from './components/messages';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
-class App extends Component {
-  render(){
+ const App = () => {
+  
   return (
-    <div>
-     {/* <Login/> */}
-     <Messages/>
-    </div> 
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/" exact component={LogIn}></Route>
+          <Route path="/register" exact component={Messages}></Route>
+        </Switch>
+      </div>
+    </Router>
   );
- }
 }
 export default App;

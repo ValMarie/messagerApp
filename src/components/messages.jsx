@@ -9,7 +9,7 @@ import { Input,
         Navbar,
     } 
     from 'reactstrap';
-import { FaSearch, FaWifi } from "react-icons/fa";
+import { FaSearch,  } from "react-icons/fa";
 
 class Messages extends Component {
 
